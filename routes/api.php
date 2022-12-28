@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //route for table books
-Route::get("/books", [BooksController::class, "index"])->middleware("auth:sanctum"); // get all data books
+Route::get("/books", [BooksController::class, "index"]); // get all data books
 
 Route::get("/books/{id}", [BooksController::class, "show"])->middleware("auth:sanctum"); // get data books by id books
 

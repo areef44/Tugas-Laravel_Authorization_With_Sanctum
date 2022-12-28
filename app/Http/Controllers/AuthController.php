@@ -39,7 +39,8 @@ class AuthController extends Controller
                 "auth" => [
                     "token" => $token->plainTextToken,
                     "token_type" => 'Bearer'
-                ]
+                ],
+                "user" => $user
             ]
         ]);
     }

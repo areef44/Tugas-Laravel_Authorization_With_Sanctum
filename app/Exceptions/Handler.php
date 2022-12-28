@@ -48,11 +48,11 @@ class Handler extends ExceptionHandler
             //
         });
 
-        $this->renderable(function ($e, $request) {
+        $this->renderable(function (AuthenticationException $e, $request) {
             if ($request->is("api/*")) {
                 return response()->json([
-                    "status" => true,
-                    "message" => "",
+                    "status" => false,
+                    "message" => "Masukan Token Wooy",
                     "data" => null
                 ]);
             }
